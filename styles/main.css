@@ -1,0 +1,46 @@
+@import url("variables.css");
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0%;
+  margin: 0%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  font-family: "Raleway", sans-serif;
+}
+
+.button {
+  background-color: var(--color-accent);
+  border: 2.5px solid var(--color-primary);
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+  font-size: 12pt;
+}
+
+.button:hover {
+  background-color: var(--color-primary);
+  color: var(--color-accent);
+}
+
+.hero {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-center {
+  text-align: center;
+}
