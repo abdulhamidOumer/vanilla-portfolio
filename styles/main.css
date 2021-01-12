@@ -33,12 +33,15 @@ button {
   color: var(--color-accent);
 }
 
-.hero {
+.full-screen-hero {
   display: flex;
   height: 100%;
   width: 100%;
   align-items: center;
   justify-content: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hero-center {
