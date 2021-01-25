@@ -1,0 +1,18 @@
+@import url("variables.css");
+
+@media only screen and (max-width: 720px) {
+  .full-screen-hero__contents {
+    flex-direction: column-reverse;
+    height: 100%;
+  }
+
+  .full-screen-hero__contents__socials {
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .full-screen-hero__contents__socials__item {
+    margin: 0 0.5rem;
+  }
+}

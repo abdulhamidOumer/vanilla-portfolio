@@ -1,4 +1,14 @@
 :root {
   --color-accent: #ffffff;
-  --color-primary: #000000;
+  --color-primary: #512da8;
+  --color-secondary: #ea7317;
+  --text-color: #000000;
+
+  /*Sizes*/
+  --normal-border: 0.15rem;
+  --thick-border: 0.2rem;
+  --normal-font-size: 12pt;
+
+  /*Devices*/
+  --mobile-device: 720px;
 }
