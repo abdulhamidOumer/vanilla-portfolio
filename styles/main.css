@@ -158,6 +158,10 @@ h5 { font-size: var(--heading-5); }
   flex: 1;
 }
 
+.full-screen-hero__contents__description h1{
+  font-size: var(--heading-2);
+}
+
 .full-screen-hero__contents__socials {
   padding: 0 1rem;
   display: flex;
