@@ -2,7 +2,8 @@
   --color-accent: #ffffff;
   --color-primary: #512da8;
   --color-secondary: #ea7317;
-  --text-color: #000000;
+  --text-color: #464646;
+  --border-color: #888;
 
   /*Sizes*/
   --normal-border: 0.15rem;
@@ -27,4 +28,9 @@
   --heading-5: var(--smallFontSize);
   --heading-6: 0.64rem;
   --heading-7: var(--smallestFontSize);
+
+
+  /*Some defaults*/
+  --border-radius: 10px;
+  --small-space: 10px;
 }
