@@ -1,20 +1,16 @@
 // Get the modal
 var bioModal = document.getElementById('bioModal');
 var readMoreButton = document.getElementById("readMoreButton");
-var closeSpan = document.getElementById("closeBioModal");
 
+readMoreButton.addEventListener('click', scrollToBio);
 
-readMoreButton.onclick = function() {
-    bioModal.style.display = "block";
-}
+function scrollToBio(e) {
+    // bioModal.style.display = "block";
+    e.preventDefault();
+    const offsetTop = document.querySelector('#shortBio').offsetTop;
 
-closeSpan.onclick = function() {
-    bioModal.style.display = "none";
-}
-
-
-window.onclick = function(event) {
-    if (event.target == bioModal) {
-        bioModal.style.display = "none";
-    }
+    scroll({
+        top: offsetTop,
+        behavior: 'smooth'
+    })
 }

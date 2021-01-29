@@ -238,7 +238,7 @@ p {
   bottom: 0px;
 }
 
-.bio-modal__content__avatar {
+.avatar {
   height: 200px;
   width: 200px;
   border-radius: 50%;
@@ -268,6 +268,28 @@ p {
   text-decoration: none;
   cursor: pointer;
 }
+
+.bio-container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  align-items: center;
+  background: var(--color-primary);
+}
+
+.bio-container__content {
+  width: 50%;
+  text-align: justify;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: var(--color-accent);
+  padding: var(--box-padding);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
 
 .small-icon {
   font-size: 14pt;
