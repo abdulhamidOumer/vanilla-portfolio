@@ -245,30 +245,6 @@ p {
 
 }
 
-.bio-modal__content__paragraph {
-  text-align: justify;
-  margin-top: 30px;
-}
-
-.bio-modal__content__close {
-  color: var(--color-secondary);
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.bio-modal__content__header {
-  background-color: var(--color-primary);
-  height: 100px;
-}
-
-.bio-modal__content__close:hover,
-.bio-modal__content__close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
 .bio-container {
   display: flex;
   justify-content: center;
