@@ -99,7 +99,11 @@
 
     <section class="bio-container" id="shortBio">
         <div class="bio-container__content">
-            <img width="200px" height="200px" alt="avatar" class="bio-container__content__avatar avatar" src="./assets/avatar.png" />
+            <picture>
+                <source srcset="./assets/avatar.webp" type="image/webp" >
+                <source srcset="./assets/avatar.png" type="image/png" >
+                <img width="200px" height="200px" alt="avatar" class="bio-container__content__avatar avatar" src="./assets/avatar.png" />
+            </picture>
             <p class="bio-container__content__paragraph">
                 Hello 👋🏾. as introduced from up above, I am Abdulhamid Oumer
                 A full stack javascript developer born and raised at Addiss Ababa, Ethiopia. I am currently employed at Addis Software PLC.
