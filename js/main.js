@@ -1,6 +1,7 @@
 // Get the modal
 var bioModal = document.getElementById('bioModal');
 var readMoreButton = document.getElementById("readMoreButton");
+var fullScrenHero = document.querySelectorAll('.full-screen-hero');
 
 readMoreButton.addEventListener('click', scrollToBio);
 
@@ -13,4 +14,39 @@ function scrollToBio(e) {
         top: offsetTop,
         behavior: 'smooth'
     })
+}
+
+/**
+ * check_webp_feature:
+ * @param {'lossy' | 'lossless' | 'alpha' | 'animation'} feature 'feature' can be one of 'lossy', 'lossless', 'alpha' or 'animation'.
+ * @param {()=> callback 'callback(feature, result)' will be passed back the detection result (in an asynchronous way!)
+ */
+function check_webp_feature(feature, callback) {
+    var kTestImages = {
+        lossy: "UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEADsD+JaQAA3AAAAAA",
+        lossless: "UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQERGIiP4HAA==",
+        alpha: "UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA==",
+        animation: "UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA"
+    };
+    var img = new Image();
+    img.onload = function () {
+        var result = (img.width > 0) && (img.height > 0);
+        callback(feature, result);
+    };
+    img.onerror = function () {
+        callback(feature, false);
+    };
+    img.src = "data:image/webp;base64," + kTestImages[feature];
+}
+
+
+window.onload = function () {
+    check_webp_feature('lossless',  function(feature, success){
+        if(!success){
+            // Recurse theough elements with WebP background and add the no-webp class 
+            fullScrenHero.forEach(function(bgElement){
+                bgElement.classList.add('no-webp');
+            })
+        }
+    });
 }
