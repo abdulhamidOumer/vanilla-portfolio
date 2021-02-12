@@ -3,6 +3,7 @@ var bioModal = document.getElementById("bioModal");
 var readMoreButton = document.getElementById("readMoreButton");
 var fullScrenHero = document.querySelectorAll(".full-screen-hero");
 var exactFullScreenElement = document.getElementById("fullScreenHero");
+var mainNavigation = document.getElementById("mainNavigation");
 
 readMoreButton.addEventListener("click", scrollToBio);
 
@@ -59,6 +60,8 @@ window.onscroll = function (event) {
   //     console.log("Is Bottom");
   //   }
   if (window.scrollY >= exactFullScreenElement.clientHeight) {
-    console.log("Reached the bottom");
+    mainNavigation.classList.add("nav-bar--sticky");
+  } else {
+    mainNavigation.classList.remove("nav-bar--sticky");
   }
 };

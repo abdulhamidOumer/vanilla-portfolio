@@ -306,6 +306,11 @@ p {
   justify-content: flex-end;
 }
 
+.nav-bar--sticky {
+  position: fixed;
+  top: 0;
+}
+
 .nav-bar__buttons {
   margin: 1rem;
 }
