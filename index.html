@@ -45,10 +45,24 @@
                 <title>arrow-down-icon</title>
                 <path d="M25.819 13.906l1.387 1.387c0.587 0.588 0.587 1.538 0 2.119l-12.144 12.15c-0.588 0.587-1.537 0.587-2.119 0l-12.15-12.15c-0.588-0.587-0.588-1.537 0-2.119l1.388-1.387c0.594-0.594 1.563-0.581 2.144 0.025l7.175 7.531v-17.962c0-0.831 0.669-1.5 1.5-1.5h2c0.831 0 1.5 0.669 1.5 1.5v17.962l7.175-7.531c0.581-0.613 1.55-0.625 2.144-0.025z"></path>
             </symbol>
+
+            <symbol xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" id="tools">
+                <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"></path>
+              </symbol>
+
+              <symbol xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" id="briefcase">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"></path>
+              </symbol>
+
+              <symbol xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" id="home">
+                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path>
+                <path d="M9 22V12h6v10"></path>
+              </symbol>
         </defs>
     </svg>
         
-    <div class="full-screen-hero">
+    <div class="full-screen-hero" id="fullScreenHero">
         <div class="full-screen-hero__cover"></div>
 
         <div class="full-screen-hero__contents">
@@ -97,7 +111,30 @@
 
     </div>
 
-    <section class="bio-container" id="shortBio">
+    <section class="main-content" id="shortBio">
+        
+        <nav class="nav-bar">
+
+            <a href="#" class="nav-bar__buttons button button--iconed-only button--rounded button--secondary">
+                <svg class="icon">
+                    <use xlink:href="#home"></use>
+                </svg>
+            </a>
+
+            <a href="#" class="nav-bar__buttons button button--iconed-only button--rounded button--secondary button--secondary--active">
+                <svg class="icon">
+                    <use xlink:href="#tools"></use>
+                </svg>
+            </a>
+
+            <a href="#" class="nav-bar__buttons button button--iconed-only button--rounded button--secondary">
+                <svg class="icon">
+                    <use xlink:href="#briefcase"></use>
+                </svg>
+            </a>
+        </nav>
+
+        <div class="bio-container">
         <div class="bio-container__content">
             <picture>
                 <source srcset="./assets/avatar.webp" type="image/webp" >
@@ -112,6 +149,7 @@
                 Until then you can read blogs about my progress on <a href="https://dev.to/abdulhamidoumer" target="_blank">Dev.to</a>.
                 And I also share some of my thoughts on <a href="https://twiter.com/aotwits" target="_blank">twitter</a> 🐦
             </p>
+        </div>
         </div>
     </section>
 

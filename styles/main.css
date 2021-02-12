@@ -16,7 +16,11 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   margin: 3rem 0 1.38rem;
   line-height: 1.3;
 }
@@ -28,20 +32,27 @@ h6 {
   font-weight: 400;
 }
 
-
 h1 {
   /*No need for top margin as h1 should always be the first title*/
   margin-top: 0;
   font-size: var(--heading-1);
 }
 
-h2 { font-size: var(--heading-2); }
+h2 {
+  font-size: var(--heading-2);
+}
 
-h3 { font-size: var(--heading-3); }
+h3 {
+  font-size: var(--heading-3);
+}
 
-h4 { font-size: var(--heading-4); }
+h4 {
+  font-size: var(--heading-4);
+}
 
-h5 { font-size: var(--heading-5); }
+h5 {
+  font-size: var(--heading-5);
+}
 
 p {
   line-height: 1.3;
@@ -120,6 +131,10 @@ p {
   outline-color: var(--color-secondary);
 }
 
+.button--secondary--active {
+  background-color: var(--color-secondary-dark);
+}
+
 .button--transparent {
   background-color: transparent;
   color: var(--color-primary);
@@ -163,7 +178,7 @@ p {
   flex: 1;
 }
 
-.full-screen-hero__contents__description h1{
+.full-screen-hero__contents__description h1 {
   font-size: var(--heading-2);
 }
 
@@ -205,10 +220,9 @@ p {
   text-transform: capitalize;
 }
 
-
 /*Bio Modal*/
 .bio-modal {
-  display: none; 
+  display: none;
   position: fixed;
   z-index: 1;
   padding-top: 100px;
@@ -217,10 +231,9 @@ p {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
-
 
 .bio-modal__content {
   background: var(--color-accent);
@@ -234,7 +247,7 @@ p {
 }
 
 .bio-modal__content::before {
-  content: '';
+  content: "";
   height: 100px;
   top: 0px;
   right: 0px;
@@ -246,16 +259,21 @@ p {
   height: 200px;
   width: 200px;
   border-radius: 50%;
+}
 
+.main-content {
+  display: flex;
+  height: 100%;
+  background: var(--color-primary);
+  flex-direction: column;
 }
 
 .bio-container {
   display: flex;
   justify-content: center;
-  height: 100%;
   text-align: center;
   align-items: center;
-  background: var(--color-primary);
+  flex: 1;
 }
 
 .bio-container__content {
@@ -270,7 +288,6 @@ p {
   box-shadow: var(--box-shadow);
 }
 
-
 .icon {
   display: inline-block;
   width: 1em;
@@ -279,6 +296,18 @@ p {
   stroke-width: 0;
   stroke: currentColor;
   fill: currentColor;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: baseline;
+  justify-content: flex-end;
+}
+
+.nav-bar__buttons {
+  margin: 1rem;
 }
 
 /* ==========================================
@@ -305,8 +334,7 @@ Single-colored icons can be modified like so:
   width: 0.875em;
 }
 
-
-
 .small-icon {
-  font-size: 14pt;
+  height: 1.2rem;
+  width: 1.2rem;
 }
