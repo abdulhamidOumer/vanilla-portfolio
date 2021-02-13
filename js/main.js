@@ -5,18 +5,28 @@ var fullScrenHero = document.querySelectorAll(".full-screen-hero");
 var exactFullScreenElement = document.getElementById("fullScreenHero");
 var mainNavigation = document.getElementById("mainNavigation");
 
-readMoreButton.addEventListener("click", scrollToBio);
+// readMoreButton.addEventListener("click", scrollToBio);
 
-function scrollToBio(e) {
-  // bioModal.style.display = "block";
+// function scrollToBio(e) {
+//   // bioModal.style.display = "block";
+//   e.preventDefault();
+//   const offsetTop = document.querySelector("#shortBio").offsetTop;
+
+//   scroll({
+//     top: offsetTop,
+//     behavior: "smooth",
+//   });
+// }
+
+window.addEventListener("hashchange", function (e) {
+  console.log(e);
   e.preventDefault();
-  const offsetTop = document.querySelector("#shortBio").offsetTop;
 
-  scroll({
-    top: offsetTop,
-    behavior: "smooth",
-  });
-}
+  var theHash = window.location.hash;
+  const offsetTop = document.querySelector(theHash).offsetTop;
+
+  scroll({ top: offsetTop });
+});
 
 /**
  * check_webp_feature:
