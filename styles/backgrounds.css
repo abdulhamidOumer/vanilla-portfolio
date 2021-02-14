@@ -1,3 +1,7 @@
 .full-screen-hero {
-  background-image: url("../assets/heder-background.webp");
+  background-image: url("../assets/header-background.webp");
+}
+
+.full-screen-hero.no-webp {
+  background-image: url("../assets/header-background.png");
 }

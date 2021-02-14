@@ -197,14 +197,6 @@ p {
   font-size: 1.2rem;
 }
 
-.full-screen-hero {
-  background-image: url("../assets/header-background.webp");
-}
-
-.full-screen-hero.no-webp {
-  background-image: url("../assets/header-background.png");
-}
-
 .emphasis-text {
   background-color: var(--color-secondary);
   color: var(--color-accent);

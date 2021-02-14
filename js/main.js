@@ -19,7 +19,6 @@ var mainNavigation = document.getElementById("mainNavigation");
 // }
 
 window.addEventListener("hashchange", function (e) {
-  console.log(e);
   e.preventDefault();
 
   var theHash = window.location.hash;
